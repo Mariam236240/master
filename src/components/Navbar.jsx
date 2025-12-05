@@ -17,7 +17,7 @@ export default function Navbar() {
     right: "0",
     left: "0",
    zIndex: 2000,
-   height: "131px"
+   height: "100px"
 }}>
       <div className="container">
         <NavLink
