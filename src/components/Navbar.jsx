@@ -1,6 +1,7 @@
-import { BiFontSize } from "react-icons/bi";
-import { Link, NavLink } from "react-router-dom";
-
+import { HashRouter, Routes, Route, NavLink } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "./assets/index-bbfl2k4X.css"; // your custom CSS
 
 export default function Navbar() {
   const activeLinkStyle = {
@@ -11,39 +12,51 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg" style={{ background: "#2C3E50", padding: "40px"  ,
-    position: "fixed",
-    top: "0",
-    right: "0",
-    left: "0",
-   zIndex: 2000,
-   height: "131px"
-}}>
-      <div className="container">
+    <nav
+      className="navbar navbar-expand-lg fixed-top"
+      style={{ background: "#2C3E50", padding: "20px 40px", zIndex: 2000 }}
+    >
+      <div className="container-fluid">
         <NavLink
           className="navbar-brand text-white fw-bold"
-          style={{ fontSize: "40px", marginLeft: "-80px" }}
+          style={{ fontSize: "36px" }}
           to="/"
         >
           START FRAMEWORK
         </NavLink>
 
         <button
-          className="navbar-toggler text-white"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse justify-content-center" id="mainNav">
-          <ul className="navbar-nav" style={{ marginLeft: "800px", fontSize: "xx-large" }}>
+        <div className="collapse navbar-collapse" id="mainNav">
+          <ul className="navbar-nav ms-auto" style={{ fontSize: "20px" }}>
             <li className="nav-item">
               <NavLink
-                to="/About"
-                className="nav-link fw-bold px-3"
-                style={({ isActive }) => (isActive ? activeLinkStyle : { color: "#fff" })}
+                to="/"
+                className="nav-link fw-bold"
+                style={({ isActive }) =>
+                  isActive ? activeLinkStyle : { color: "#fff" }
+                }
+              >
+                HOME
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                to="/about"
+                className="nav-link fw-bold"
+                style={({ isActive }) =>
+                  isActive ? activeLinkStyle : { color: "#fff" }
+                }
               >
                 ABOUT
               </NavLink>
@@ -51,17 +64,21 @@ export default function Navbar() {
             <li className="nav-item">
               <NavLink
                 to="/portfolio"
-                className="nav-link fw-bold px-3"
-                style={({ isActive }) => (isActive ? activeLinkStyle : { color: "#fff" })}
+                className="nav-link fw-bold"
+                style={({ isActive }) =>
+                  isActive ? activeLinkStyle : { color: "#fff" }
+                }
               >
                 PORTFOLIO
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink
-                to="/Contact"
-                className="nav-link fw-bold px-3"
-                style={({ isActive }) => (isActive ? activeLinkStyle : { color: "#fff" })}
+                to="/contact"
+                className="nav-link fw-bold"
+                style={({ isActive }) =>
+                  isActive ? activeLinkStyle : { color: "#fff" }
+                }
               >
                 CONTACT
               </NavLink>
