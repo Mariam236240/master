@@ -1,50 +1,59 @@
-
-
+/* Prevent horizontal scroll */
 html, body {
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
+/* Divider line */
 .divider-line {
   background: black;
   height: 4px;
   width: 90px;
+  margin: 20px 0;
 }
 
-
+/* Portfolio item wrapper */
 .portfolio-item {
   position: relative;
+  width: 100%;       /* Full width for responsive scaling */
+  max-width: 300px;  /* Optional max size */
+  margin: 15px;
   cursor: pointer;
-  z-index:1000 ;
- 
+  display: inline-block; /* allows wrapping in grid */
 }
 
+/* Portfolio image */
 .portfolio-item img {
-  width: 80%;
+  width: 100%;
   border-radius: 10px;
+  display: block;
 }
 
+/* Hover overlay */
 .portfolio-hover {
   position: absolute;
   top: 0;
   left: 0;
-  width: 80%;
+  width: 100%;             /* Fully cover image */
   height: 100%;
-  background: rgba(26, 188, 156, 0.9); /* same green as your theme */
+  background: rgba(26, 188, 156, 0.9); /* green overlay */
   border-radius: 10px;
-  opacity: 0;
+  opacity: 0;              /* hidden by default */
   transition: opacity 0.3s ease;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 49px;
-  
+  z-index: 10;             /* on top of image */
 }
 
+/* Show overlay on hover */
 .portfolio-item:hover .portfolio-hover {
   opacity: 1;
 }
 
-
+/* Hover icon inside overlay */
 .hover-icon {
   background: white;
   width: 80px;
@@ -53,9 +62,19 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box; 
+  box-sizing: border-box;
+  font-size: 24px; /* optional icon size */
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .portfolio-item {
+    max-width: 45%; /* two per row on tablets */
+  }
+}
 
-
-
+@media (max-width: 480px) {
+  .portfolio-item {
+    max-width: 100%; /* full width on mobile */
+  }
+}
