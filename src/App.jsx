@@ -16,7 +16,7 @@ export default function App() {
     <HashRouter>
       <Navbar />
 
-      {/* Add padding to prevent overlap with fixed navbar */}
+      {/* Add padding to prevent content overlapping the fixed navbar */}
       <div style={{ paddingTop: "130px" }}>
         <Routes>
           <Route path="/" element={<Header />} />
