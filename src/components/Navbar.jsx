@@ -1,7 +1,4 @@
-import { HashRouter, Routes, Route, NavLink } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import "./assets/index-bbfl2k4X.css"; // your custom CSS
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const activeLinkStyle = {
@@ -41,22 +38,9 @@ export default function Navbar() {
           <ul className="navbar-nav ms-auto" style={{ fontSize: "20px" }}>
             <li className="nav-item">
               <NavLink
-                to="/"
-                className="nav-link fw-bold"
-                style={({ isActive }) =>
-                  isActive ? activeLinkStyle : { color: "#fff" }
-                }
-              >
-                HOME
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
                 to="/about"
                 className="nav-link fw-bold"
-                style={({ isActive }) =>
-                  isActive ? activeLinkStyle : { color: "#fff" }
-                }
+                style={({ isActive }) => (isActive ? activeLinkStyle : { color: "#fff" })}
               >
                 ABOUT
               </NavLink>
@@ -65,9 +49,7 @@ export default function Navbar() {
               <NavLink
                 to="/portfolio"
                 className="nav-link fw-bold"
-                style={({ isActive }) =>
-                  isActive ? activeLinkStyle : { color: "#fff" }
-                }
+                style={({ isActive }) => (isActive ? activeLinkStyle : { color: "#fff" })}
               >
                 PORTFOLIO
               </NavLink>
@@ -76,9 +58,7 @@ export default function Navbar() {
               <NavLink
                 to="/contact"
                 className="nav-link fw-bold"
-                style={({ isActive }) =>
-                  isActive ? activeLinkStyle : { color: "#fff" }
-                }
+                style={({ isActive }) => (isActive ? activeLinkStyle : { color: "#fff" })}
               >
                 CONTACT
               </NavLink>
