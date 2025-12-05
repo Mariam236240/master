@@ -38,7 +38,7 @@ export default function Navbar() {
         </button>
 
         <div className="collapse navbar-collapse justify-content-center" id="mainNav">
-          <ul className="navbar-nav" style={{ marginLeft: "5500px", fontSize: "xx-large" }}>
+          <ul className="navbar-nav" style={{ marginLeft: "550px", fontSize: "xx-large" }}>
             <li className="nav-item">
               <NavLink
                 to="/About"
