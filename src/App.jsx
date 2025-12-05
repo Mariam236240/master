@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import Portfolio from "./components/Portfolio";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-
+import "./assets/index-bbfl2k4X.css";
 export default function App() {
   return (
     <HashRouter>
