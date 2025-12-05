@@ -36,7 +36,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 75px;
+  margin-left: 49px;
   
 }
 
@@ -55,5 +55,6 @@ html, body {
   justify-content: center;
   box-sizing: border-box; 
 }
+
 
 
